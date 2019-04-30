@@ -1,34 +1,25 @@
 import React , {Component} from 'react';
+import Cards from '../components/Cards';
 import 'bootstrap/dist/css/bootstrap.css';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 class App extends Component {
  render() {
+
    return (
-       <div>
-         <h1>Hello</h1>
-         <h2>World</h2>
+       <div className="container-fluid">
+           <div className="container">
+                <div className="row">
+                    <button onClick={this.addCard} className="btn btn-outline-info d-block mx-auto mt-5">Add Cards</button>
+                    <div id="Cards" className="col-xl-12">
+                            <Cards/>
+                    </div>
+                </div>
+           </div>
        </div>
    )
+ }
+ addCard = () => {
+     // document.getElementById("Cards").
  }
 }
 export default App;
