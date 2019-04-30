@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
 function App() {
   return (
@@ -22,5 +21,5 @@ function App() {
     </div>
   );
 }
-
+class App extends Co
 export default App;
