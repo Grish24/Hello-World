@@ -9,7 +9,7 @@ class App extends Component {
     handleClick = () => {
         // console.log(this.state.countArray);
         this.setState(oldState => ({
-            countArray: [...oldState.countArray, +this.state.countArray.length],
+            countArray: [...oldState.countArray, Date.now()],
         }));
     };
 
@@ -20,13 +20,13 @@ class App extends Component {
                 <div className="container">
                     <div className="col-xl-12 my-5">
                         <button onClick={this.handleClick} className="btn btn-outline-info d-block mx-auto">Add
-                            Cards {this.state.countArray.length <= 0 ? 0 : +this.state.countArray.length }
+                            Cards {+this.state.countArray.length }
                         </button>
                     </div>
                     <div className="row">
-                        {this.state.countArray.map((key) => {
+                        {this.state.countArray.map((value) => {
                             return (
-                                <Cards key={key}/>
+                                <Cards key={value}/>
                             )
                             })
                         }
